@@ -1,7 +1,9 @@
 // scripts.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('studentForm');
+    const navIcons = document.querySelectorAll('.nav-icon');
+    const sections = document.querySelectorAll('.section');
+    const studentForm = document.getElementById('studentForm');
     const studentList = document.getElementById('studentList');
     const coordinatorList = document.getElementById('coordinatorList');
 
@@ -21,43 +23,4 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     // Load coordinators
-    coordinators.forEach(coordinator => {
-        const card = document.createElement('div');
-        card.classList.add('coordinator-card');
-
-        card.innerHTML = `
-            <img src="${coordinator.image}" alt="${coordinator.name}">
-            <h3>${coordinator.name}</h3>
-            <p><strong>Role:</strong> ${coordinator.role}</p>
-            <p><strong>Email:</strong> ${coordinator.email}</p>
-        `;
-
-        coordinatorList.appendChild(card);
-    });
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        // Get form data
-        const name = document.getElementById('name').value;
-        const researchArea = document.getElementById('researchArea').value;
-        const email = document.getElementById('email').value;
-        const image = document.getElementById('image').value;
-
-        // Create new student card
-        const card = document.createElement('div');
-        card.classList.add('student-card');
-
-        card.innerHTML = `
-            <img src="${image}" alt="${name}">
-            <h2>${name}</h2>
-            <p><strong>Research Area:</strong> ${researchArea}</p>
-            <p><strong>Email:</strong> ${email}</p>
-        `;
-
-        studentList.appendChild(card);
-
-        // Clear the form
-        form.reset();
-    });
-});
+    coordinators.forEach(coordinator =>
