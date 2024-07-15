@@ -12,20 +12,27 @@
     </header>
 
     <main>
-        <section class="student-card-container">
-            <div class="student-card">
-                <img src="student1.jpg" alt="Student 1">
-                <h2>Student Name 1</h2>
-                <p><strong>Research Area:</strong> Cybersecurity in Cloud Computing</p>
-                <p><strong>Email:</strong> student1@example.com</p>
-            </div>
-            <div class="student-card">
-                <img src="student2.jpg" alt="Student 2">
-                <h2>Student Name 2</h2>
-                <p><strong>Research Area:</strong> AI and Security</p>
-                <p><strong>Email:</strong> student2@example.com</p>
-            </div>
-            <!-- Add more student cards here -->
+        <section class="form-container">
+            <h2>Add a New Student</h2>
+            <form id="studentForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="researchArea">Research Area:</label>
+                <input type="text" id="researchArea" name="researchArea" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="image">Image URL:</label>
+                <input type="url" id="image" name="image" required>
+                
+                <button type="submit">Add Student</button>
+            </form>
+        </section>
+
+        <section class="student-card-container" id="studentList">
+            <!-- Student cards will be dynamically added here -->
         </section>
     </main>
 
@@ -36,3 +43,4 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
