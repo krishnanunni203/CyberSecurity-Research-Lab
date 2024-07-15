@@ -1,26 +1,34 @@
 // scripts.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    const navIcons = document.querySelectorAll('.nav-icon');
-    const sections = document.querySelectorAll('.section');
-    const studentForm = document.getElementById('studentForm');
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const sections = document.querySelectorAll('section');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            // Remove active class from all sections
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Add active class to target section
+            targetSection.classList.add('active');
+        });
+    });
+
+    const form = document.getElementById('studentForm');
     const studentList = document.getElementById('studentList');
     const coordinatorList = document.getElementById('coordinatorList');
 
-    const coordinators = [
-        {
-            name: "Dr. John Doe",
-            role: "Head of Research",
-            email: "john.doe@example.com",
-            image: "https://example.com/images/john_doe.jpg"
-        },
-        {
-            name: "Dr. Jane Smith",
-            role: "Senior Researcher",
-            email: "jane.smith@example.com",
-            image: "https://example.com/images/jane_smith.jpg"
-        }
-    ];
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    // Load coordinators
-    coordinators.forEach(coordinator =>
+        // Get form data
+        const name = document.getElementById('name').value;
+        const researchArea = document.getElementById('researchArea').value;
+        const email
+
