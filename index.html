@@ -3,36 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhD Students in Cybersecurity Research Lab</title>
+    <title>Cybersecurity Research Lab</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>PhD Students in Cybersecurity Research Lab</h1>
+        <h1>Cybersecurity Research Lab</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#coordinators">Coordinators</a></li>
+                <li><a href="#students">Students</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="form-container">
-            <h2>Add a New Student</h2>
-            <form id="studentForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="researchArea">Research Area:</label>
-                <input type="text" id="researchArea" name="researchArea" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="image">Image URL:</label>
-                <input type="url" id="image" name="image" required>
-                
-                <button type="submit">Add Student</button>
-            </form>
+        <section id="home">
+            <h2>Welcome to the Cybersecurity Research Lab</h2>
+            <p>Explore our research, meet our team, and learn about our projects.</p>
         </section>
 
-        <section class="student-card-container" id="studentList">
-            <!-- Student cards will be dynamically added here -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>The Cybersecurity Research Lab is dedicated to advancing the field of cybersecurity through innovative research and collaboration. Our mission is to develop cutting-edge solutions to protect systems and data from cyber threats.</p>
+        </section>
+
+        <section id="coordinators">
+            <h2>Coordinators</h2>
+            <div class="coordinator-card-container" id="coordinatorList">
+                <!-- Coordinator cards will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="students">
+            <h2>PhD Students</h2>
+            <div class="form-container">
+                <h3>Add a New Student</h3>
+                <form id="studentForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="researchArea">Research Area:</label>
+                    <input type="text" id="researchArea" name="researchArea" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="image">Image URL:</label>
+                    <input type="url" id="image" name="image" required>
+                    
+                    <button type="submit">Add Student</button>
+                </form>
+            </div>
+            <div class="student-card-container" id="studentList">
+                <!-- Student cards will be dynamically added here -->
+            </div>
         </section>
     </main>
 
@@ -43,3 +70,4 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
