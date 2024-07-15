@@ -11,78 +11,56 @@ body {
     line-height: 1.6;
     background: #f4f4f4;
     color: #333;
-    overflow-x: hidden;
-}
-
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 /* Header */
 header {
     background: linear-gradient(to right, #0066cc, #00cc99);
     color: #fff;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px;
+    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
-header h1 {
-    font-size: 2.5rem;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .header-right {
     display: flex;
     align-items: center;
-}
-
-.header-right nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.header-right nav ul li {
-    margin: 0 15px;
-}
-
-.header-right nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s;
-}
-
-.header-right nav ul li a i {
-    margin-right: 8px;
-}
-
-.header-right nav ul li a:hover {
-    color: #ffdd57;
+    gap: 10px;
 }
 
 .sidebar-toggle {
-    display: none;
-    background: #0066cc;
-    color: #fff;
+    background: transparent;
     border: none;
-    padding: 10px;
+    color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: background 0.3s;
-}
-
-.sidebar-toggle:hover {
-    background: #004d99;
 }
 
 /* Main Content */
@@ -94,15 +72,13 @@ header h1 {
 .sidebar {
     width: 250px;
     background: #333;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    color: #fff;
+    height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
-    height: 100vh;
     transform: translateX(-100%);
-    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
 }
 
 .sidebar.active {
@@ -111,37 +87,28 @@ header h1 {
 
 .sidebar-nav ul {
     list-style: none;
+    padding: 20px;
 }
 
 .sidebar-nav ul li {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .sidebar-nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
     display: flex;
     align-items: center;
-    transition: color 0.3s;
-}
-
-.sidebar-nav ul li a i {
-    margin-right: 8px;
-}
-
-.sidebar-nav ul li a:hover {
-    color: #ffdd57;
+    gap: 10px;
 }
 
 /* Main Section */
 main {
-    flex-grow: 1;
-    padding: 40px 20px;
-    position: relative;
+    flex: 1;
+    margin-left: 250px;
+    padding: 20px;
 }
 
-/* Section */
 .section {
     display: none;
     opacity: 0;
@@ -153,58 +120,24 @@ main {
     opacity: 1;
 }
 
-.section h2 {
+/* Welcome Section */
+#welcome {
+    animation: fadeInUp 1s ease-out;
+}
+
+.welcome-text {
     font-size: 2.5rem;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.section p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-}
-
-/* Form */
-.form-container {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-form label {
-    display: block;
-    margin-top: 10px;
-}
-
-form input {
-    width: calc(100% - 20px);
-    padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s ease;
 }
 
-form input:focus {
-    border-color: #0066cc;
-    outline: none;
+.welcome-description {
+    font-size: 1.2rem;
 }
 
-form button {
-    background: #0066cc;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-form button:hover {
-    background: #004d99;
+/* About Us */
+#about ul {
+    list-style: disc;
+    margin-left: 20px;
 }
 
 /* Card Container */
@@ -243,14 +176,42 @@ footer p {
 }
 
 /* Animations */
-@keyframes fadeIn {
+@keyframes fadeInUp {
     from {
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
 
 
 
