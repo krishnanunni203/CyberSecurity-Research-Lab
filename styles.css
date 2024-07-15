@@ -1,0 +1,78 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Main Container */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Student Cards */
+.student-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.student-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.student-card img {
+    width: 100%;
+    height: auto;
+}
+
+.student-card h2 {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    margin: 0;
+}
+
+.student-card p {
+    padding: 10px;
+}
+
+.student-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
