@@ -24,6 +24,9 @@ header {
     color: #fff;
     padding: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
@@ -53,13 +56,50 @@ nav ul li a:hover {
     color: #ffdd57;
 }
 
+.main-content {
+    display: flex;
+}
+
+aside {
+    width: 250px;
+    background: #333;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.sidebar-nav ul li a:hover {
+    color: #ffdd57;
+}
+
 main {
-    padding: 40px 0;
+    flex-grow: 1;
+    padding: 40px 20px;
 }
 
 .section {
-    padding: 60px 0;
-    text-align: center;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.section.active {
+    display: block;
+    opacity: 1;
 }
 
 .section h2 {
@@ -145,49 +185,7 @@ form button:hover {
 }
 
 .coordinator-card h2,
-.student-card h2 {
-    padding: 10px;
-    background: #0066cc;
-    color: #fff;
-    margin: 0;
-    font-size: 1.5rem;
-}
 
-.coordinator-card p,
-.student-card p {
-    padding: 10px;
-}
-
-.coordinator-card:hover,
-.student-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.coordinator-card:hover img,
-.student-card:hover img {
-    opacity: 0.8;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
 
