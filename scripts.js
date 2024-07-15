@@ -3,6 +3,37 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('studentForm');
     const studentList = document.getElementById('studentList');
+    const coordinatorList = document.getElementById('coordinatorList');
+
+    const coordinators = [
+        {
+            name: "Dr. John Doe",
+            role: "Head of Research",
+            email: "john.doe@example.com",
+            image: "https://example.com/images/john_doe.jpg"
+        },
+        {
+            name: "Dr. Jane Smith",
+            role: "Senior Researcher",
+            email: "jane.smith@example.com",
+            image: "https://example.com/images/jane_smith.jpg"
+        }
+    ];
+
+    // Load coordinators
+    coordinators.forEach(coordinator => {
+        const card = document.createElement('div');
+        card.classList.add('coordinator-card');
+
+        card.innerHTML = `
+            <img src="${coordinator.image}" alt="${coordinator.name}">
+            <h3>${coordinator.name}</h3>
+            <p><strong>Role:</strong> ${coordinator.role}</p>
+            <p><strong>Email:</strong> ${coordinator.email}</p>
+        `;
+
+        coordinatorList.appendChild(card);
+    });
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -18,17 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         card.classList.add('student-card');
 
         card.innerHTML = `
-            <img src="${image}" alt="${name}">
-            <h2>${name}</h2>
-            <p><strong>Research Area:</strong> ${researchArea}</p>
-            <p><strong>Email:</strong> ${email}</p>
-        `;
+            <img src="${image}" alt="${
 
-        // Add the new card to the student list
-        studentList.appendChild(card);
-
-        // Clear the form
-        form.reset();
-    });
-});
 
