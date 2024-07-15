@@ -13,58 +13,94 @@ body {
     color: #333;
 }
 
+/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+/* Header */
 header {
-    background: #0066cc;
+    background: linear-gradient(to right, #0066cc, #00cc99);
     color: #fff;
     padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 header h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
-    text-align: center;
 }
 
-nav ul {
+header .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li {
+.header-right nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
+.header-right nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
+.header-right nav ul li a i {
+    margin-right: 8px;
+}
+
+.header-right nav ul li a:hover {
     color: #ffdd57;
 }
 
+.sidebar-toggle {
+    display: none;
+    background: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Main Content */
 .main-content {
     display: flex;
 }
 
-aside {
+/* Sidebar */
+.sidebar {
     width: 250px;
     background: #333;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    z-index: 1000;
+}
+
+.sidebar.active {
+    transform: translateX(0);
 }
 
 .sidebar-nav ul {
@@ -79,18 +115,27 @@ aside {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
     transition: color 0.3s;
+}
+
+.sidebar-nav ul li a i {
+    margin-right: 8px;
 }
 
 .sidebar-nav ul li a:hover {
     color: #ffdd57;
 }
 
+/* Main Section */
 main {
     flex-grow: 1;
     padding: 40px 20px;
+    position: relative;
 }
 
+/* Section */
 .section {
     display: none;
     opacity: 0;
@@ -156,16 +201,14 @@ form button:hover {
 }
 
 /* Coordinator and Student Cards */
-.coordinator-card-container,
-.student-card-container {
+.card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
+    justify-content: center;
 }
 
-.coordinator-card,
-.student-card {
+.card {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -176,16 +219,14 @@ form button:hover {
     animation: fadeIn 1s ease-in-out;
 }
 
-.coordinator-card img,
-.student-card img {
+.card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
 }
 
-.coordinator-card h2,
-.student-card h2 {
+.card h2 {
     padding: 10px;
     background: #0066cc;
     color: #fff;
@@ -193,19 +234,16 @@ form button:hover {
     font-size: 1.5rem;
 }
 
-.coordinator-card p,
-.student-card p {
+.card p {
     padding: 10px;
 }
 
-.coordinator-card:hover,
-.student-card:hover {
+.card:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.coordinator-card:hover img,
-.student-card:hover img {
+.card:hover img {
     opacity: 0.8;
 }
 
@@ -215,6 +253,9 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Animations */
@@ -228,6 +269,20 @@ footer {
         transform: translateY(0);
     }
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-right {
+        display: none;
+    }
+    .sidebar-toggle {
+        display: block;
+    }
+    main {
+        padding: 20px;
+    }
+}
+
 
 
 
