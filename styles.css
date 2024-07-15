@@ -96,6 +96,106 @@ form label {
 }
 
 form input {
-    width: calc(100% - 20
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+form button {
+    background: #0066cc;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #004d99;
+}
+
+/* Coordinator and Student Cards */
+.coordinator-card-container,
+.student-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.coordinator-card,
+.student-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.coordinator-card img,
+.student-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.coordinator-card h3,
+.student-card h2 {
+    padding: 10px;
+    background: #0066cc;
+    color: #fff;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.coordinator-card p,
+.student-card p {
+    padding: 10px;
+}
+
+.coordinator-card:hover,
+.student-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.coordinator-card:hover img,
+.student-card:hover img {
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 
