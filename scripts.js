@@ -1,270 +1,88 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+// scripts.js
 
-/* Body and Main Container */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background: #f4f4f4;
-    color: #333;
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.section');
+    const links = document.querySelectorAll('nav ul li a, .sidebar-nav ul li a');
+    const sidebar = document.querySelector('.sidebar');
+    const header = document.querySelector('header');
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+    // Function to handle section visibility
+    const showSection = (id) => {
+        sections.forEach(section => {
+            section.classList.remove('active');
+            if (section.id === id) {
+                section.classList.add('active');
+            }
+        });
+    };
 
-header {
-    background: linear-gradient(to right, #0066cc, #00cc99);
-    color: #fff;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    // Function to smooth scroll to sections
+    const smoothScroll = (event) => {
+        event.preventDefault();
+        const targetId = event.target.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop - header.offsetHeight,
+                behavior: 'smooth'
+            });
+        }
+    };
 
-header h1 {
-    font-size: 2.5rem;
-}
+    // Add event listeners for nav links
+    links.forEach(link => {
+        link.addEventListener('click', smoothScroll);
+    });
 
-header nav ul {
-    list-style: none;
-    display: flex;
-}
+    // Handle form submission
+    const form = document.getElementById('studentForm');
+    const studentList = document.getElementById('studentList');
 
-header nav ul li {
-    margin: 0 15px;
-}
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s;
-}
+        // Get form data
+        const name = document.getElementById('name').value;
+        const researchArea = document.getElementById('researchArea').value;
+        const email = document.getElementById('email').value;
+        const image = document.getElementById('image').value;
 
-header nav ul li a i {
-    margin-right: 8px;
-}
+        // Create new student card
+        const card = document.createElement('div');
+        card.classList.add('card');
 
-header nav ul li a:hover {
-    color: #ffdd57;
-}
+        card.innerHTML = `
+            <img src="${image}" alt="${name}">
+            <h2>${name}</h2>
+            <p><strong>Research Area:</strong> ${researchArea}</p>
+            <p><strong>Email:</strong> ${email}</p>
+        `;
 
-.main-content {
-    display: flex;
-}
+        // Add the new card to the student list
+        studentList.appendChild(card);
 
-aside {
-    width: 250px;
-    background: #333;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        // Clear the form
+        form.reset();
+    });
 
-.sidebar-nav ul {
-    list-style: none;
-}
+    // Show the home section by default
+    showSection('home');
 
-.sidebar-nav ul li {
-    margin-bottom: 20px;
-}
+    // Toggle the sidebar on smaller screens
+    document.querySelector('.sidebar-toggle').addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+    });
 
-.sidebar-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s;
-}
+    // Optional: Hide sidebar on scroll for better user experience
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollTop) {
+            sidebar.classList.remove('active');
+        }
+        lastScrollTop = window.scrollY;
+    });
+});
 
-.sidebar-nav ul li a i {
-    margin-right: 8px;
-}
-
-.sidebar-nav ul li a:hover {
-    color: #ffdd57;
-}
-
-main {
-    flex-grow: 1;
-    padding: 40px 20px;
-}
-
-.section {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.section.active {
-    display: block;
-    opacity: 1;
-}
-
-.section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.section p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-}
-
-/* Form */
-.form-container {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-form label {
-    display: block;
-    margin-top: 10px;
-}
-
-form input {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s ease;
-}
-
-form input:focus {
-    border-color: #0066cc;
-    outline: none;
-}
-
-form button {
-    background: #0066cc;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-form button:hover {
-    background: #004d99;
-}
-
-/* Coordinator and Student Cards */
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    overflow: hidden;
-    transform: translateY(0);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.card h2 {
-    padding: 10px;
-    background: #0066cc;
-    color: #fff;
-    margin: 0;
-    font-size: 1.5rem
-/* Coordinator and Student Cards */
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    overflow: hidden;
-    transform: translateY(0);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.card h2 {
-    padding: 10px;
-    background: #0066cc;
-    color: #fff;
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.card p {
-    padding: 10px;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.card:hover img {
-    opacity: 0.8;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
 
