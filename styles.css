@@ -185,6 +185,50 @@ form button:hover {
 }
 
 .coordinator-card h2,
+.student-card h2 {
+    padding: 10px;
+    background: #0066cc;
+    color: #fff;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.coordinator-card p,
+.student-card p {
+    padding: 10px;
+}
+
+.coordinator-card:hover,
+.student-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.coordinator-card:hover img,
+.student-card:hover img {
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 
 
