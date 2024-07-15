@@ -3,35 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Details</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-    </style>
+    <title>PhD Students in Cybersecurity Research Lab</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Student Details</h1>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Roll Number</th>
-            <th>Email</th>
-        </tr>
-        <tr>
-            <td>John Doe</td>
-            <td>12345</td>
-            <td>john.doe@example.com</td>
-        </tr>
-        <!-- Add more student rows as needed -->
-    </table>
+    <header>
+        <h1>PhD Students in Cybersecurity Research Lab</h1>
+    </header>
+
+    <main>
+        <section class="student-card-container">
+            <div class="student-card">
+                <img src="student1.jpg" alt="Student 1">
+                <h2>Student Name 1</h2>
+                <p><strong>Research Area:</strong> Cybersecurity in Cloud Computing</p>
+                <p><strong>Email:</strong> student1@example.com</p>
+            </div>
+            <div class="student-card">
+                <img src="student2.jpg" alt="Student 2">
+                <h2>Student Name 2</h2>
+                <p><strong>Research Area:</strong> AI and Security</p>
+                <p><strong>Email:</strong> student2@example.com</p>
+            </div>
+            <!-- Add more student cards here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cybersecurity Research Lab</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
