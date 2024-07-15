@@ -49,6 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
         card.classList.add('student-card');
 
         card.innerHTML = `
-            <img src="${image}" alt="${
+            <img src="${image}" alt="${name}">
+            <h2>${name}</h2>
+            <p><strong>Research Area:</strong> ${researchArea}</p>
+            <p><strong>Email:</strong> ${email}</p>
+        `;
 
+        studentList.appendChild(card);
 
+        // Clear the form
+        form.reset();
+    });
+});
