@@ -1,11 +1,11 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('.home-icons a');
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section');
 
     navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
+        link.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
+            const targetId = e.target.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
 
             if (targetSection) {
@@ -17,13 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     behavior: 'smooth'
                 });
             }
+
+            navLinks.forEach(navLink => navLink.classList.remove('active'));
+            e.target.classList.add('active');
         });
     });
 
-    // Initial Active Section
-    const homeSection = document.getElementById('home');
-    if (homeSection) {
-        homeSection.classList.add('active');
-    }
+    // Initialize with home section visible
+    document.getElementById('home').classList.add('active');
 });
-
