@@ -27,5 +27,4 @@ document.addEventListener('DOMContentLoaded', () => {
         if (section.classList.contains('home-section')) {
             section.classList.add('active');
         }
-    });
-});
+   
