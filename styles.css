@@ -112,6 +112,8 @@ header h1 {
     background-image: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Ensures the background stays in place when scrolling */
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     height: 100vh; /* Full viewport height */
