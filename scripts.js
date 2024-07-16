@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.home-icons a');
     const sections = document.querySelectorAll('.section');
 
     navLinks.forEach(link => {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const targetSection = document.getElementById(targetId);
 
             if (targetSection) {
-                document.querySelector('.section.active').classList.remove('active');
+                sections.forEach(section => section.classList.remove('active'));
                 targetSection.classList.add('active');
 
                 window.scrollTo({
@@ -19,4 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // Initial Active Section
+    const homeSection = document.getElementById('home');
+    if (homeSection) {
+        homeSection.classList.add('active');
+    }
 });
+
