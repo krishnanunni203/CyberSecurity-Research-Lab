@@ -56,60 +56,18 @@ header h1 {
     padding: 20px;
 }
 
-.section {
-    display: none;
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.section.active {
-    display: block;
-}
-
-.section h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    animation: fadeInUp 1s ease-in-out;
-}
-
-.section p, .section ul {
-    font-size: 1.2rem;
-    margin: 20px 0;
-    animation: fadeInUp 1.2s ease-in-out;
-}
-
-.section ul {
-    text-align: left;
-    margin: 0 auto;
-    max-width: 600px;
-    list-style: none;
-    padding-left: 0;
-}
-
-.section ul li::before {
-    content: "• ";
-    color: #0066cc;
-    font-size: 1.5rem;
-    vertical-align: middle;
-}
-
-.section ul li {
-    margin: 10px 0;
-    padding-left: 10px;
-}
-
+/* Center content only for the home section */
 .home-section {
     background-image: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg');
     background-size: cover;
     background-position: center;
-    padding: 60px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .home-content {
