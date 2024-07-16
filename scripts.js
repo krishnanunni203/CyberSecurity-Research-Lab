@@ -1,121 +1,62 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
 
-/* Body and Main Container */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background: #f4f4f4;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-header {
-    background: linear-gradient(to right, #0066cc, #00cc99);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.section {
-    display: none;
-    text-align: center;
-}
-
-.section.active {
-    display: block;
-}
-
-.section h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.section p, .section ul {
-    font-size: 1.2rem;
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    overflow: hidden;
-    transform: translateY(0);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.card h3 {
-    padding: 10px;
-    background: #0066cc;
-    color: #fff;
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.card p {
-    padding: 10px;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.card:hover img {
-    opacity: 0.8;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    font-size: 0.8rem;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+    function deactivateSections() {
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    function activateSection(id) {
+        deactivateSections();
+        document.querySelector(id).classList.add('active');
     }
-}
+
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            activateSection(targetId);
+        });
+    });
+
+    const coordinatorList = document.getElementById('coordinatorList');
+    const studentList = document.getElementById('studentList');
+    const internList = document.getElementById('internList');
+
+    const coordinators = [
+        { name: 'Dr. Alice Smith', designation: 'Lead Researcher', image: 'https://via.placeholder.com/150' },
+        { name: 'Dr. Bob Johnson', designation: 'Senior Researcher', image: 'https://via.placeholder.com/150' }
+    ];
+
+    const students = [
+        { name: 'John Doe', researchArea: 'Network Security', email: 'john.doe@example.com', image: 'https://via.placeholder.com/150' },
+        { name: 'Jane Doe', researchArea: 'Cryptography', email: 'jane.doe@example.com', image: 'https://via.placeholder.com/150' }
+    ];
+
+    const interns = [
+        { name: 'Intern A', project: 'Malware Analysis', image: 'https://via.placeholder.com/150' },
+        { name: 'Intern B', project: 'Vulnerability Assessment', image: 'https://via.placeholder.com/150' }
+    ];
+
+    function addCards(container, data) {
+        data.forEach(item => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            card.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" style="width: 100%; border-radius: 5px;">
+                <h3>${item.name}</h3>
+                ${item.designation ? `<p>${item.designation}</p>` : ''}
+                ${item.researchArea ? `<p>Research Area: ${item.researchArea}</p>` : ''}
+                ${item.project ? `<p>Project: ${item.project}</p>` : ''}
+                ${item.email ? `<p>Email: ${item.email}</p>` : ''}
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    addCards(coordinatorList, coordinators);
+    addCards(studentList, students);
+    addCards(internList, interns);
+});
