@@ -96,11 +96,14 @@ header h1 {
 }
 
 .home-content h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 0;
     animation: fadeInText 2s ease-in-out;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
 }
 
 .home-content p {
@@ -109,6 +112,9 @@ header h1 {
     animation: fadeInText 2s ease-in-out 0.5s;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
 }
 
 /* Card Container */
@@ -122,4 +128,53 @@ header h1 {
 .card {
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background: #0066cc;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
