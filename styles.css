@@ -99,17 +99,16 @@ header h1 {
 }
 
 .home-text {
-    animation: textAnimation 1.5s ease-in-out;
     text-align: center;
-    color: #003366; /* Standard dark blue color */
+    animation: textAnimation 1.5s ease-in-out;
 }
 
 .home-title {
-    font-size: 4rem; /* Enlarged font size for prominence */
+    font-size: 5rem; /* Enlarged font size for prominence */
     margin-bottom: 20px;
-    color: #003366; /* Dark blue color for title */
+    color: #fff; /* White text color */
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Darker outline for better readability */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Black outline for better readability */
 }
 
 .home-description {
