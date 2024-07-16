@@ -20,12 +20,26 @@ header {
     background: linear-gradient(to right, #0066cc, #00cc99);
     color: #fff;
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.navbar .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+    color: #00cc99;
+    transform: scale(1.1);
 }
 
 /* Home Section */
@@ -34,26 +48,41 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     width: 100vw;
     height: 100vh;
-    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
     overflow: hidden;
 }
 
-/* Icons Container on Home Page */
+.home-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.home-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
 .home-icons {
     position: absolute;
     top: 20px;
     left: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    z-index: 1;
 }
 
 .home-icons a {
@@ -74,44 +103,14 @@ header {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Content Container */
-.main-content {
-    flex: 1;
-    padding: 20px;
-}
-
-/* Sections */
+/* Section Styles */
 .section {
-    display: none;
     padding: 20px;
+    display: none;
 }
 
 .section.active {
     display: block;
-}
-
-/* Sub Navbar for People Section */
-.sub-navbar {
-    margin: 20px 0;
-}
-
-.sub-navbar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sub-navbar li {
-    margin: 10px 0;
-}
-
-.sub-navbar a {
-    text-decoration: none;
-    color: #0066cc;
-    font-weight: bold;
-}
-
-.sub-navbar a:hover {
-    text-decoration: underline;
 }
 
 /* Footer */
