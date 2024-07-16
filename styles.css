@@ -68,25 +68,55 @@ header {
     opacity: 1;
 }
 
-.icon-dropdown {
-    position: relative;
-}
-
-.icon-submenu {
+/* Sub Icon Container styles */
+.sub-icon-container {
     display: none;
     position: absolute;
-    top: 40px; /* Position below the parent icon */
+    top: 40px;
     left: 50%;
     transform: translateX(-50%);
-    background: #0066cc;
-    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
+    padding: 10px;
 }
 
-.icon-dropdown:hover .icon-submenu {
+.icon:hover .sub-icon-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 10px; /* Adjust spacing between sub-icons */
+}
+
+.sub-icon {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.sub-icon:hover {
+    color: #ffd700; /* Highlight color on hover */
+}
+
+.sub-icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 3px 5px; /* Reduced padding */
+    font-size: 0.8rem; /* Reduced font size */
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.sub-icon:hover::after {
+    opacity: 1;
 }
 
 /* Main content styles */
