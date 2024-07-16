@@ -76,6 +76,40 @@ header {
     padding: 20px;
 }
 
+/* Home Section */
+.home-section {
+    background-image: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Ensure positioning context */
+}
+
+.home-content {
+    text-align: center;
+    z-index: 1; /* Ensure text content appears above the background image */
+    position: relative; /* Ensure positioning context */
+}
+
+.home-content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+}
+
 /* Section Styling */
 .section {
     display: none;
