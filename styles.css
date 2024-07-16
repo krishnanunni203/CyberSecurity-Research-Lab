@@ -133,27 +133,4 @@ header h1 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 300px;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
-.card h3 {
-    margin: 10px 0;
-    font-size: 1.5rem;
-}
-
-.card p {
-    font-size: 1rem;
-    margin: 0 10px;
-}
-
-footer {
-    background: #0066cc;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-}
+    transition: transform 0.3s
