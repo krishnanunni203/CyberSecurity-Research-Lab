@@ -198,6 +198,25 @@ footer {
     font-size: 0.9rem;
 }
 
+.sub-navbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sub-navbar .nav-link {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.sub-navbar .nav-link:hover, .sub-navbar .nav-link.active {
+    color: #00cc99;
+    transform: scale(1.05);
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
