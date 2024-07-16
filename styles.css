@@ -24,10 +24,9 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1; /* Ensure header is above background image */
 }
 
 header h1 {
@@ -58,33 +57,18 @@ header h1 {
 .main-content {
     flex: 1;
     position: relative;
-    z-index: 1; /* Ensure main content is above background image */
 }
 
-/* Home Section Styling */
-#home {
+/* Home Image Styling */
+.home-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh; /* Full viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg') no-repeat center center;
-    background-size: cover;
-    position: relative;
-    color: #fff; /* Ensure text is visible on background */
-}
-
-#home h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    animation: fadeIn 2s ease-in-out;
-}
-
-#home p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    animation: fadeIn 2s ease-in-out;
+    object-fit: cover; /* Cover the area */
+    opacity: 0.7; /* Slight transparency */
+    z-index: -1; /* Positioned behind the content */
 }
 
 /* Section Styling */
@@ -130,12 +114,13 @@ header h1 {
     width: 300px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Ensuring the card height adjusts to its content */
 }
 
 .card img {
     width: 100%;
-    height: auto; /* Ensures image maintains aspect ratio */
-    object-fit: cover; /* Ensures image fits without distortion */
+    height: auto; /* Allow image to maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the card area */
 }
 
 .card h3 {
