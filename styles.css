@@ -15,6 +15,7 @@ body {
     min-height: 100vh;
 }
 
+/* Header and Navbar */
 header {
     background: linear-gradient(to right, #0066cc, #00cc99);
     color: #fff;
@@ -31,17 +32,21 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh; /* Full viewport height */
 }
 
 .icon-navbar ul {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 20px; /* Space between icons */
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .icon-navbar li {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -50,20 +55,28 @@ header {
 }
 
 .icon-navbar img {
-    width: 40px; /* Adjust icon size as needed */
-    height: 40px;
-    transition: transform 0.3s ease-in-out;
+    width: 60px; /* Adjust icon size as needed */
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 10px;
+    display: block;
 }
 
 .icon-navbar img:hover {
     transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Main Content */
 .main-content {
     flex: 1;
     padding: 20px;
 }
 
+/* Section Styling */
 .section {
     display: none;
     text-align: center;
@@ -172,14 +185,17 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Sub-navbar for People Section */
 .sub-navbar {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
 }
 
 .sub-navbar ul {
     display: flex;
+    flex-direction: column;
     gap: 15px;
     list-style: none;
     padding: 0;
