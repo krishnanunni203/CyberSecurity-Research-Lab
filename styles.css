@@ -41,15 +41,18 @@ header {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Icons at the Top of Home Page */
+/* Icons Container on Home Page */
 .home-icons {
-    display: flex;
-    flex-direction: column;
     position: absolute;
     top: 20px;
     left: 20px;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
