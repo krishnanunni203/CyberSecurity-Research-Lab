@@ -27,28 +27,36 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+.icon-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.navbar {
-    position: absolute;
-    right: 20px;
+.icon-navbar ul {
     display: flex;
     gap: 20px;
+    list-style: none;
+    padding: 0;
 }
 
-.navbar .nav-link {
-    color: #fff;
+.icon-navbar li {
+    display: flex;
+    align-items: center;
+}
+
+.icon-navbar a {
     text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.navbar .nav-link:hover, .navbar .nav-link.active {
-    color: #00cc99;
-    transform: scale(1.05);
+.icon-navbar img {
+    width: 40px; /* Adjust icon size as needed */
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-navbar img:hover {
+    transform: scale(1.1);
 }
 
 .main-content {
@@ -56,7 +64,6 @@ header h1 {
     padding: 20px;
 }
 
-/* Ensure each section takes up the full viewport height and centers content */
 .section {
     display: none;
     text-align: center;
@@ -102,39 +109,6 @@ header h1 {
 .section ul li {
     margin: 10px 0;
     padding-left: 10px;
-}
-
-.home-section {
-    background-image: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    position: relative; /* Ensure positioning context */
-}
-
-.home-content {
-    text-align: center;
-    z-index: 1; /* Ensure text content appears above the background image */
-    position: relative; /* Ensure positioning context */
-}
-
-.home-content h2 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: #fff;
-    text-shadow: 2px 2px 4px #000;
-}
-
-.home-content p {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    color: #fff;
-    text-shadow: 2px 2px 4px #000;
 }
 
 .card-container {
@@ -204,9 +178,21 @@ footer {
     margin-top: 20px;
 }
 
+.sub-navbar ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.sub-navbar li {
+    display: flex;
+    align-items: center;
+}
+
 .sub-navbar .nav-link {
     color: #333;
-    margin: 0 10px;
+    margin: 0;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
