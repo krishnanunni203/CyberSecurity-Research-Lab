@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetId = e.target.getAttribute('href').substring(1);
+            const targetId = e.target.closest('a').getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
 
             if (targetSection) {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             navLinks.forEach(navLink => navLink.classList.remove('active'));
-            e.target.classList.add('active');
+            e.target.closest('a').classList.add('active');
         });
     });
 
