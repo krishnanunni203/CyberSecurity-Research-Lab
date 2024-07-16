@@ -70,6 +70,8 @@ header {
 .home-content {
     text-align: center;
     z-index: 1;
+    max-width: 800px; /* Optional: restrict the width for better appearance */
+    margin: 0 auto; /* Center align */
 }
 
 .home-content h2 {
@@ -86,6 +88,7 @@ header {
 .section {
     padding: 20px;
     display: none;
+    text-align: center; /* Center align text */
 }
 
 .section.active {
