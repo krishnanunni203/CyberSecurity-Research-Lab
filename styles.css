@@ -15,7 +15,7 @@ body {
     min-height: 100vh;
 }
 
-/* Header and Navbar */
+/* Header */
 header {
     background: linear-gradient(to right, #0066cc, #00cc99);
     color: #fff;
@@ -40,10 +40,10 @@ header {
     width: 100vw;
     height: 100vh;
     position: relative;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 /* Icons Container on Home Page */
