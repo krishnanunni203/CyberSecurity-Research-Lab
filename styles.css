@@ -7,33 +7,36 @@
 
 /* Body and Main Container */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f4f4f4;
 }
 
+/* Header Styling */
 header {
-    background: #003366; /* Deep blue for header */
+    background: linear-gradient(to right, #0066cc, #00cc99);
     color: #fff;
     padding: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.header-content {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    justify-content: space-between;
-    align-items: center;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
 .navbar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     display: flex;
     gap: 20px;
 }
@@ -46,57 +49,11 @@ header {
 }
 
 .navbar .nav-link:hover, .navbar .nav-link.active {
-    color: #ffcc00; /* Gold accent color */
+    color: #00cc99;
     transform: scale(1.05);
 }
 
-.main-content {
-    flex: 1;
-    padding: 20px;
-}
-
-.section {
-    display: none;
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
-    padding: 20px;
-}
-
-.section.active {
-    display: block;
-}
-
-.section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #003366;
-}
-
-.section p, .section ul {
-    font-size: 1.2rem;
-    margin: 20px 0;
-}
-
-.section ul {
-    text-align: left;
-    margin: 0 auto;
-    max-width: 600px;
-    list-style: none;
-    padding-left: 0;
-}
-
-.section ul li::before {
-    content: "• ";
-    color: #003366;
-    font-size: 1.5rem;
-    vertical-align: middle;
-}
-
-.section ul li {
-    margin: 10px 0;
-    padding-left: 10px;
-}
-
+/* Home Section Styling */
 .home-section {
     background-image: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg');
     background-size: cover;
@@ -104,7 +61,6 @@ header {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     height: 100vh; /* Full viewport height */
     display: flex;
     align-items: center;
@@ -119,26 +75,181 @@ header {
 .home-content h2 {
     font-size: 3rem;
     margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000; /* Black outline effect */
 }
 
 .home-content p {
     font-size: 1.5rem;
     margin-top: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000; /* Black outline effect */
 }
 
+/* Main Content Styling */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Section Styling */
+.section {
+    display: none;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section.active {
+    display: flex;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.section p, .section ul {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.section ul {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.section ul li::before {
+    content: "• ";
+    color: #0066cc;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.section ul li {
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+/* Card Styling */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+    padding: 10px;
+    background: #f4f4f4;
+}
+
+.card p {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.card a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
 footer {
-    background: #003366; /* Deep blue for footer */
+    background: #0066cc;
     color: #fff;
     text-align: center;
     padding: 10px 0;
     font-size: 0.9rem;
 }
 
+/* Icon Styling */
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.icon-container .icon {
+    width: 50px;
+    height: 50px;
+    background-color: #0066cc;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.icon-container .icon:hover {
+    background-color: #004d99;
+    transform: scale(1.1);
+}
+
+/* Keyframes for Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
