@@ -55,7 +55,8 @@ header {
     transform: translateX(-50%);
     background: #333;
     color: #fff;
-    padding: 5px;
+    padding: 3px 5px; /* Reduced padding */
+    font-size: 0.8rem; /* Reduced font size */
     border-radius: 3px;
     white-space: nowrap;
     opacity: 0;
