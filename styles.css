@@ -28,54 +28,6 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.icon-navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-}
-
-.icon-navbar ul {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between icons */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.icon-navbar li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon-navbar a {
-    text-decoration: none;
-}
-
-.icon-navbar img {
-    width: 60px; /* Adjust icon size as needed */
-    height: 60px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    padding: 10px;
-    display: block;
-}
-
-.icon-navbar img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Main Content */
-.main-content {
-    flex: 1;
-    padding: 20px;
-}
-
 /* Home Section */
 .home-section {
     background-image: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg');
@@ -85,24 +37,47 @@ header {
     background-attachment: fixed;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    position: relative; /* Ensure positioning context */
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
-.home-content {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 10px;
-    max-width: 80%;
-    margin: auto;
+/* Icons at the Top of Home Page */
+.home-icons {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 20px;
+    left: 20px;
+    gap: 20px;
 }
 
+.home-icons a {
+    display: block;
+}
+
+.home-icons img {
+    width: 50px; /* Adjust icon size */
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-icons img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Container */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Sections */
 .section {
     display: none;
     padding: 20px;
@@ -110,6 +85,30 @@ header {
 
 .section.active {
     display: block;
+}
+
+/* Sub Navbar for People Section */
+.sub-navbar {
+    margin: 20px 0;
+}
+
+.sub-navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sub-navbar li {
+    margin: 10px 0;
+}
+
+.sub-navbar a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.sub-navbar a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
