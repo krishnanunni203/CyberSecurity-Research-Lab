@@ -25,9 +25,13 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 15px;
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    z-index: 1000;
 }
 
 .navbar .nav-link {
@@ -37,9 +41,15 @@ header {
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.navbar .nav-link:hover {
-    color: #00cc99;
+.navbar .nav-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.navbar .nav-link:hover .nav-icon {
     transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Home Section */
@@ -73,34 +83,6 @@ header {
 .home-content p {
     font-size: 1.2rem;
     margin-top: 10px;
-}
-
-.home-icons {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 1;
-}
-
-.home-icons a {
-    display: block;
-}
-
-.home-icons img {
-    width: 50px; /* Adjust icon size */
-    height: 50px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.home-icons img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Section Styles */
