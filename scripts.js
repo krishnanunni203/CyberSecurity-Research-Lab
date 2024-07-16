@@ -1,31 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section');
-    const navLinks = document.querySelectorAll('.icon-navbar .nav-link');
 
     navLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default action of anchor tag
-
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
-            sections.forEach(section => {
-                section.classList.remove('active');
-                if (section.id === targetId) {
-                    section.classList.add('active');
-                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
+            const targetSection = document.getElementById(targetId);
 
-            navLinks.forEach(navLink => {
-                navLink.classList.remove('active');
-            });
-            this.classList.add('active');
+            if (targetSection) {
+                document.querySelector('.section.active').classList.remove('active');
+                targetSection.classList.add('active');
+
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         });
-    });
-
-    // Initial Active Section
-    sections.forEach(section => {
-        if (section.classList.contains('home-section')) {
-            section.classList.add('active');
-        }
     });
 });
