@@ -21,17 +21,16 @@ header {
     color: #fff;
     padding: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+    justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
     display: flex;
+    width: 100%;
+    max-width: 1200px;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 }
 
 .navbar {
@@ -48,32 +47,6 @@ header {
 
 .navbar .nav-link:hover, .navbar .nav-link.active {
     color: #ffcc00; /* Gold accent color */
-    transform: scale(1.05);
-}
-
-.icons-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
-.icon-link {
-    display: block;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-    background-color: #004080; /* Dark blue background for icons */
-    padding: 10px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.icon-link:hover {
-    background-color: #0066cc; /* Lighter blue on hover */
     transform: scale(1.05);
 }
 
