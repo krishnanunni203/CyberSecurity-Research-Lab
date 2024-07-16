@@ -116,6 +116,7 @@ header h1 {
     background-attachment: fixed; /* Ensures the background stays in place when scrolling */
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
     display: flex;
     align-items: center;
@@ -124,6 +125,7 @@ header h1 {
 
 .home-content {
     text-align: center;
+    z-index: 1; /* Ensure text content appears above the background image */
 }
 
 .home-content h2 {
