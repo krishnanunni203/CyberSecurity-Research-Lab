@@ -15,8 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Scroll to the top of the clicked section
-            document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            navLinks.forEach(navLink => {
+                navLink.classList.remove('active');
+            });
+            link.classList.add('active');
         });
     });
 });
