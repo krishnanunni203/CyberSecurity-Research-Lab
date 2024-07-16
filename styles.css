@@ -44,11 +44,12 @@ header h1 {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .navbar .nav-link:hover {
     color: #00cc99;
+    transform: scale(1.1);
 }
 
 .main-content {
@@ -69,7 +70,6 @@ header h1 {
 .section h2 {
     font-size: 2rem;
     margin-bottom: 10px;
-    animation: moveIn 2s ease-in-out infinite alternate;
 }
 
 .section p, .section ul {
@@ -105,7 +105,6 @@ header h1 {
     overflow: hidden;
     transform: translateY(0);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    animation: fadeIn 1s ease-in-out;
 }
 
 .card img {
@@ -155,13 +154,3 @@ footer {
         transform: translateY(0);
     }
 }
-
-@keyframes moveIn {
-    from {
-        transform: translateX(-10px);
-    }
-    to {
-        transform: translateX(10px);
-    }
-}
-
