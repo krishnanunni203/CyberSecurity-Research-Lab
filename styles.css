@@ -236,10 +236,32 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    font-size: 0.9rem;
+    position: relative;
 }
 
-/* Animations */
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .icon-container {
+        display: none;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    .home-content h2 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
