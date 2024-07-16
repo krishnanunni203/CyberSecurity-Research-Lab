@@ -30,6 +30,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 20px; /* Adjust spacing between icons */
+    padding: 10px 0; /* Add padding to the container */
 }
 
 .icon {
@@ -45,10 +46,10 @@ header {
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
-.icon:hover::after {
+.icon::after {
     content: attr(data-tooltip);
     position: absolute;
-    bottom: 100%;
+    bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
     background: #333;
@@ -56,6 +57,13 @@ header {
     padding: 5px;
     border-radius: 3px;
     white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.icon:hover::after {
+    opacity: 1;
 }
 
 /* Main content styles */
