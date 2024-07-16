@@ -69,17 +69,33 @@ header h1 {
 .section h2 {
     font-size: 2rem;
     margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 .section p, .section ul {
     font-size: 1.2rem;
     margin: 20px 0;
+    animation: fadeInUp 1.2s ease-in-out;
 }
 
 .section ul {
     text-align: left;
     margin: 0 auto;
     max-width: 600px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.section ul li::before {
+    content: "• ";
+    color: #0066cc;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.section ul li {
+    margin: 10px 0;
+    padding-left: 10px;
 }
 
 .home-section {
@@ -168,5 +184,16 @@ footer {
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
