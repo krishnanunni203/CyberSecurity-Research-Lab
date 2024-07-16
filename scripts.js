@@ -1,9 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section');
-    const navLinks = document.querySelectorAll('.nav-link');
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             sections.forEach(section => {
                 if (section.id === targetId) {
@@ -12,14 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     section.classList.remove('active');
                 }
             });
-
-            navLinks.forEach(navLink => {
-                navLink.classList.remove('active');
-            });
-            this.classList.add('active');
         });
     });
-
-    // Set home section as active by default
-    document.getElementById('home').classList.add('active');
 });
