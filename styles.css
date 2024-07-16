@@ -35,7 +35,6 @@ header h1 {
 
 .navbar {
     position: absolute;
-    top: 20px;
     right: 20px;
     display: flex;
     gap: 20px;
@@ -53,46 +52,13 @@ header h1 {
     transform: scale(1.05);
 }
 
-/* Home Section Styling */
-.home-section {
-    background-image: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #fff;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.home-content {
-    text-align: center;
-}
-
-.home-content h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 4px #000; /* Black outline effect */
-}
-
-.home-content p {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    color: #fff;
-    text-shadow: 1px 1px 3px #000; /* Black outline effect */
-}
-
 /* Main Content Styling */
 .main-content {
     flex: 1;
     padding: 20px;
 }
 
-/* Section Styling */
+/* Sections Styling */
 .section {
     display: none;
     text-align: center;
@@ -110,7 +76,7 @@ header h1 {
 
 .section h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     animation: fadeInUp 1s ease-in-out;
 }
 
@@ -140,7 +106,66 @@ header h1 {
     padding-left: 10px;
 }
 
-/* Card Styling */
+/* Home Section */
+.home-section {
+    background-image: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.home-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000; /* Black outline effect */
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000; /* Black outline effect */
+}
+
+/* Icon Section Styling */
+.icon-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.icon-container .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #0066cc;
+    font-size: 1.5rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.icon-container .icon:hover {
+    background: #0066cc;
+    color: #fff;
+}
+
+/* Card Container Styling */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -148,6 +173,7 @@ header h1 {
     justify-content: center;
 }
 
+/* Card Styling */
 .card {
     background: #fff;
     border-radius: 10px;
@@ -203,37 +229,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Icon Styling */
-.icon-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.icon-container .icon {
-    width: 50px;
-    height: 50px;
-    background-color: #0066cc;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.icon-container .icon:hover {
-    background-color: #004d99;
-    transform: scale(1.1);
-}
-
-/* Keyframes for Animations */
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
