@@ -121,17 +121,15 @@ main {
 }
 
 /* Welcome Section */
-#welcome {
-    animation: fadeInUp 1s ease-out;
-}
-
 .welcome-text {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    animation: fadeInUp 2s ease-out;
 }
 
 .welcome-description {
     font-size: 1.2rem;
+    animation: fadeInUp 2s ease-out;
 }
 
 /* About Us */
@@ -203,6 +201,11 @@ footer p {
         transform: translateX(0);
     }
 
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .card-container {
         flex-direction: column;
     }
@@ -211,6 +214,7 @@ footer p {
         width: 100%;
     }
 }
+
 
 
 
