@@ -97,9 +97,8 @@ header h1 {
 }
 
 .home-content {
-    background: rgba(0, 0, 0, 0.5);
+    /* Removed background and border radius */
     padding: 20px;
-    border-radius: 10px;
     text-align: center;
 }
 
