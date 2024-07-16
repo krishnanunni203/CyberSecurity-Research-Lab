@@ -68,6 +68,27 @@ header {
     opacity: 1;
 }
 
+.icon-dropdown {
+    position: relative;
+}
+
+.icon-submenu {
+    display: none;
+    position: absolute;
+    top: 40px; /* Position below the parent icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0066cc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.icon-dropdown:hover .icon-submenu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /* Main content styles */
 main {
     flex: 1; /* Takes up remaining space */
