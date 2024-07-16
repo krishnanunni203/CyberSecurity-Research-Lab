@@ -54,10 +54,6 @@ header h1 {
 .main-content {
     flex: 1;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Ensure each section takes up the full viewport height and centers content */
@@ -113,19 +109,18 @@ header h1 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Ensures the background stays in place when scrolling */
+    background-attachment: fixed;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative; /* Ensure positioning context */
 }
 
 .home-content {
     text-align: center;
     z-index: 1; /* Ensure text content appears above the background image */
+    position: relative; /* Ensure positioning context */
 }
 
 .home-content h2 {
