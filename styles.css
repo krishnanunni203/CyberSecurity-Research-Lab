@@ -62,13 +62,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    overflow: hidden;
+    flex-direction: column; /* Center-aligning text horizontally and vertically */
 }
 
 .home-content {
     text-align: center;
-    z-index: 1;
     max-width: 800px; /* Optional: restrict the width for better appearance */
     margin: 0 auto; /* Center align */
 }
