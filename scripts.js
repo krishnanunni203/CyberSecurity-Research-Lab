@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const targetId = this.getAttribute('href').substring(1);
             sections.forEach(section => {
+                section.classList.remove('active');
                 if (section.id === targetId) {
                     section.classList.add('active');
-                } else {
-                    section.classList.remove('active');
+                    section.scrollIntoView({ behavior: 'smooth' });
                 }
             });
 
