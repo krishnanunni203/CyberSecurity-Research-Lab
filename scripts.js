@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 section.classList.remove('active');
                 if (section.id === targetId) {
                     section.classList.add('active');
-                    section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
 
