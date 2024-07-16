@@ -159,6 +159,10 @@ header h1 {
     display: block;
 }
 
+.card-content {
+    padding: 10px;
+}
+
 .card h3 {
     font-size: 1.5rem;
     color: #333;
@@ -170,6 +174,15 @@ header h1 {
 .card p {
     padding: 10px;
     font-size: 1rem;
+}
+
+.card a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
 }
 
 .card:hover {
