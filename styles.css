@@ -20,15 +20,20 @@ header {
     background: linear-gradient(to right, #0066cc, #00cc99);
     color: #fff;
     padding: 20px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .navbar {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
+    overflow-x: auto;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .nav-link {
@@ -48,12 +53,12 @@ header {
 /* Main Content */
 .main-content {
     flex: 1;
-    padding: 20px;
+    padding: 80px 20px 20px; /* Padding adjusted for fixed header */
 }
 
+/* Sections */
 .section {
     display: none;
-    text-align: center;
     animation: fadeIn 1.5s ease-in-out;
     min-height: 100vh;
     display: flex;
@@ -140,13 +145,6 @@ header {
     padding-left: 10px;
 }
 
-/* Section Content */
-.content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 /* Footer */
 footer {
     background: #0066cc;
@@ -163,16 +161,5 @@ footer {
     }
     to {
         opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
