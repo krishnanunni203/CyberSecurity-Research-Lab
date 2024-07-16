@@ -7,72 +7,123 @@
 
 /* Body and Main Container */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #f4f4f4;
 }
 
-/* Header and Navigation */
 header {
-    background: linear-gradient(to right, #0066cc, #00cc99);
+    background: #003366; /* Deep blue for header */
     color: #fff;
     padding: 20px;
-    position: fixed;
-    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    z-index: 1000;
 }
 
 .navbar {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
-    overflow-x: auto;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.7);
 }
 
-.nav-link {
+.navbar .nav-link {
+    color: #fff;
     text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.nav-icon {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease-in-out;
+.navbar .nav-link:hover, .navbar .nav-link.active {
+    color: #ffcc00; /* Gold accent color */
+    transform: scale(1.05);
 }
 
-.nav-link:hover .nav-icon {
-    transform: scale(1.1);
+.icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
-/* Main Content */
+.icon-link {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    background-color: #004080; /* Dark blue background for icons */
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.icon-link:hover {
+    background-color: #0066cc; /* Lighter blue on hover */
+    transform: scale(1.05);
+}
+
 .main-content {
     flex: 1;
-    padding: 80px 20px 20px; /* Padding adjusted for fixed header */
+    padding: 20px;
 }
 
-/* Sections */
 .section {
     display: none;
-    animation: fadeIn 1.5s ease-in-out;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    padding: 20px;
 }
 
-/* Active Section */
 .section.active {
-    display: flex;
+    display: block;
 }
 
-/* Home Section */
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.section p, .section ul {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.section ul {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.section ul li::before {
+    content: "• ";
+    color: #003366;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.section ul li {
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
 .home-section {
     background-image: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg');
     background-size: cover;
@@ -81,80 +132,35 @@ header {
     background-attachment: fixed;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-/* Home Content */
 .home-content {
     text-align: center;
-    z-index: 1;
-    position: relative;
 }
 
 .home-content h2 {
     font-size: 3rem;
-    margin-bottom: 10px;
-    color: #fff;
-    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 20px;
 }
 
 .home-content p {
     font-size: 1.5rem;
     margin-top: 10px;
-    color: #fff;
-    text-shadow: 2px 2px 4px #000;
 }
 
-/* About Section */
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.about-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.about-content p, .about-content ul {
-    font-size: 1.2rem;
-    margin: 20px 0;
-}
-
-.about-content ul {
-    text-align: left;
-    margin: 0 auto;
-    max-width: 600px;
-    list-style: none;
-    padding-left: 0;
-}
-
-.about-content ul li::before {
-    content: "• ";
-    color: #0066cc;
-    font-size: 1.5rem;
-    vertical-align: middle;
-}
-
-.about-content ul li {
-    margin: 10px 0;
-    padding-left: 10px;
-}
-
-/* Footer */
 footer {
-    background: #0066cc;
+    background: #003366; /* Deep blue for footer */
     color: #fff;
     text-align: center;
     padding: 10px 0;
     font-size: 0.9rem;
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
