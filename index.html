@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Research Lab</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Cybersecurity Research Lab - Home</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Cybersecurity Research Lab</h1>
         <nav class="navbar">
-            <a href="index.html" class="nav-link active">Home</a>
-            <a href="pages/about.html" class="nav-link">About</a>
-            <a href="pages/research.html" class="nav-link">Research</a>
-            <a href="pages/funded_projects.html" class="nav-link">Funded Projects</a>
-            <a href="pages/publications.html" class="nav-link">Publications</a>
-            <a href="pages/achievements.html" class="nav-link">Achievements</a>
-            <a href="pages/collaborators.html" class="nav-link">Collaborators</a>
-            <a href="pages/events.html" class="nav-link">Events</a>
-            <a href="pages/people.html" class="nav-link">People</a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="research.html" class="nav-link">Research</a>
+            <a href="funded-projects.html" class="nav-link">Funded Projects</a>
+            <a href="publications.html" class="nav-link">Publications</a>
+            <a href="achievements.html" class="nav-link">Achievements</a>
+            <a href="collaborators.html" class="nav-link">Collaborators</a>
+            <a href="events.html" class="nav-link">Events</a>
+            <a href="#" class="nav-link dropdown">People</a>
         </nav>
+        <div class="dropdown-content">
+            <a href="lab-incharge.html">Lab Incharge</a>
+            <a href="phd-students.html">PhD Students</a>
+            <a href="interns.html">Interns</a>
+        </div>
     </header>
     <main class="main-content">
-        <section id="home" class="section">
-            <h2 class="section-title">Welcome to the Cybersecurity Research Lab</h2>
-            <p class="section-content">
-                Explore our research, meet our team, and learn about our projects.
-            </p>
+        <section id="home" class="section home-section">
+            <div class="home-content">
+                <h2>Welcome to the Cybersecurity Research Lab</h2>
+                <p>Explore our research, meet our team, and learn about our projects.</p>
+            </div>
         </section>
     </main>
     <footer>
         <p>© 2024 Cybersecurity Research Lab | DCA CUSAT</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
