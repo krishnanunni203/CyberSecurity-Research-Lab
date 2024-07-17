@@ -138,6 +138,7 @@ main {
 
 .about-section p {
     margin-bottom: 20px; /* Add margin for spacing */
+    font-size: 1.2rem; /* Increase font size */
 }
 
 .facilities-list {
@@ -154,7 +155,7 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 1 1 calc(33.333% - 30px); /* Responsive width with gap */
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Font size to match the "Key Facilities and Tools" section */
 }
 
 /* Footer styles */
