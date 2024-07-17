@@ -10,6 +10,8 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 /* Header */
@@ -17,12 +19,15 @@ header {
     background: #333;
     color: #fff;
     padding: 10px 0;
+    position: relative;
+    z-index: 1000;
 }
 
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-link {
@@ -39,33 +44,27 @@ header {
 
 /* Main Content */
 .main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
 }
 
 .home-section {
-    position: relative;
-    text-align: center;
-    color: #fff;
-}
-
-/* Background Image */
-.home-section {
-    background-image: url('PhD-CyberSecurity-ResearchLab/StockCake-Cybersecurity Monitoring Center_1721095181.jpg'); /* Update the image path */
+    background-image: url('your-background-image.jpg'); /* Update the image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
 }
 
-/* Home Content */
 .home-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    z-index: 10; /* Ensure content is above background image */
 }
 
 .home-content h1 {
@@ -83,7 +82,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    z-index: 1000;
     width: 100%;
 }
