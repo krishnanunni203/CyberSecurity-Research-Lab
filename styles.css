@@ -1,80 +1,65 @@
-/* Basic Reset */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body and Main Container */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f4f4f4;
 }
 
 header {
-    background: linear-gradient(to right, #0066cc, #00cc99);
+    background-color: #333;
     color: #fff;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 10px 0;
     position: relative;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 
 .navbar {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
 }
 
-.navbar .nav-link {
+.nav-link {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.navbar .nav-link:hover, .navbar .nav-link.active {
-    color: #00cc99;
-    transform: scale(1.05);
+.nav-link:hover {
+    background-color: #575757;
 }
 
 .dropdown {
     position: relative;
+    display: inline-block;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    border: 1px solid #ddd;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
 }
 
 .dropdown-content a {
-    display: block;
-    padding: 10px;
-    color: #333;
+    color: #fff;
+    padding: 12px 16px;
     text-decoration: none;
-    transition: background-color 0.3s;
+    display: block;
+    font-size: 14px;
 }
 
 .dropdown-content a:hover {
-    background-color: #f4f4f4;
+    background-color: #575757;
 }
 
 .dropdown:hover .dropdown-content {
@@ -82,92 +67,42 @@ header {
 }
 
 .main-content {
-    flex: 1;
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.home-section {
-    background-image: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.home-content {
-    z-index: 1;
-    position: relative;
     text-align: center;
 }
 
-.home-content h2 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: #fff;
-    text-shadow: 2px 2px 4px #000;
-}
-
-.home-content p {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    color: #fff;
-    text-shadow: 2px 2px 4px #000;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* About Us Page Styling */
-.about-section {
+.home-section, .about-section {
     padding: 20px;
-    background-color: #fff;
 }
 
-.about-section h1, .about-section h2 {
-    text-align: center;
+.home-content h2, .about-content h2, .about-content h3 {
+    font-size: 24px;
+    margin: 20px 0;
 }
 
-.about-section p {
-    margin: 20px auto;
-    max-width: 800px;
-    line-height: 1.6;
+.home-content p, .about-content p, .about-content ul li {
+    font-size: 18px;
+    margin: 10px 0;
 }
 
-/* Key Facilities and Tools */
-.key-facilities {
-    margin-top: 20px;
-}
-
-.key-facilities h3 {
-    text-align: center;
-    font-size: 1.8rem;
-}
-
-.key-facilities ul {
+ul {
     list-style-type: none;
     padding: 0;
+    text-align: left;
+    margin: 20px auto;
+    max-width: 600px;
 }
 
-.key-facilities li {
+ul li {
     margin-bottom: 10px;
-    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
