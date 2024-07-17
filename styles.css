@@ -151,7 +151,7 @@ main {
 
 /* About section styles */
 .about-section {
-    text-align: center;
+    text-align: left;
     padding: 50px 20px;
     margin-bottom: 20px; /* Add margin for spacing */
 }
@@ -164,7 +164,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px; /* Adjust spacing between list items */
+    gap: 30px; /* Adjust spacing between list items */
 }
 
 .facilities-list li {
