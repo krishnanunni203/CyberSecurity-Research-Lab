@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f4f4f4; /* Background color for the body */
+    background-color: #f4f4f4;
 }
 
 header {
@@ -30,7 +30,8 @@ header {
 
 .navbar {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
     margin-bottom: 10px;
 }
@@ -47,10 +48,14 @@ header {
     transform: scale(1.05);
 }
 
+.dropdown {
+    position: relative;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 60px; /* Adjust to place below the navbar */
+    top: 40px;
     left: 50%;
     transform: translateX(-50%);
     background: #fff;
@@ -72,7 +77,7 @@ header {
     background-color: #f4f4f4;
 }
 
-.navbar .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
@@ -84,7 +89,6 @@ header {
     align-items: center;
 }
 
-/* Home Section */
 .home-section {
     background-image: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg');
     background-size: cover;
@@ -93,17 +97,17 @@ header {
     background-attachment: fixed;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    position: relative; /* Ensure positioning context */
+    width: 100vw;
+    height: 100vh;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .home-content {
-    z-index: 1; /* Ensure text content appears above the background image */
-    position: relative; /* Ensure positioning context */
+    z-index: 1;
+    position: relative;
     text-align: center;
 }
 
@@ -130,4 +134,40 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* About Us Page Styling */
+.about-section {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.about-section h1, .about-section h2 {
+    text-align: center;
+}
+
+.about-section p {
+    margin: 20px auto;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* Key Facilities and Tools */
+.key-facilities {
+    margin-top: 20px;
+}
+
+.key-facilities h3 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.key-facilities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.key-facilities li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
 }
