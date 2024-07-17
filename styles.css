@@ -69,17 +69,16 @@ header {
     background-image: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg');
     background-size: cover;
     background-position: center;
-    height: 500px;
+    height: 100vh; /* Full viewport height */
     color: #fff;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 
 .home-content {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     padding: 20px;
     border-radius: 8px;
 }
@@ -94,16 +93,8 @@ footer {
     bottom: 0;
 }
 
-h2 {
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    margin-bottom: 10px;
+h1, p {
+    margin: 0;
 }
 
 @media (max-width: 768px) {
