@@ -63,9 +63,9 @@ header, footer {
 /* Profile Container */
 .profile-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
     padding: 20px;
 }
 
@@ -104,6 +104,13 @@ header, footer {
 
 .profile-card a:hover {
     text-decoration: underline;
+}
+
+/* Heading Style */
+.section-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
 }
 
 /* Footer Styles */
