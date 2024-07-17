@@ -1,50 +1,35 @@
-/* Basic Reset */
-body, h1, p {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Ensure body covers full viewport height */
-    display: flex;
-    flex-direction: column; /* Allow footer to be pushed down */
 }
 
-/* Header */
-header {
-    background: #333;
+header, footer {
+    background-color: #333;
     color: #fff;
-    padding: 10px 0;
-    position: relative;
-    z-index: 1000;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 .navbar {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .nav-link {
     color: #fff;
     text-decoration: none;
-    padding: 10px 15px;
-    display: inline-block;
+    padding: 10px;
 }
 
 .nav-link:hover {
-    background: #444;
+    background-color: #555;
     border-radius: 5px;
 }
 
+/* Dropdown Styles */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -53,81 +38,79 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #333;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1000;
+    z-index: 1;
 }
 
 .dropdown-content a {
-    color: black;
+    color: #fff;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Main Content */
-.main-content {
-    margin: 0;
-    padding: 0;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.dropdown-content a:hover {
+    background-color: #555;
 }
 
-.home-section {
-    background-image: url('StockCake-DigitalSecurityConcept_1721095147.jpg'); /* Ensure this path is correct */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; /* Full viewport height */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Profile Container */
+.profile-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.profile-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
     text-align: center;
-    color: #fff;
-    position: relative;
-    width: 100%; /* Ensure section takes full width */
 }
 
-/* Ensure the image is covering the section */
-.home-section:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit; /* Use same background properties */
-    z-index: -1; /* Send background image behind content */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
-.home-content {
-    z-index: 10; /* Ensure content is above background image */
-}
-
-.home-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.home-content p {
+.profile-card h2 {
     font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-/* Footer */
+.profile-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.profile-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.profile-card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
 footer {
-    background: #333;
+    background-color: #333;
     color: #fff;
+    padding: 10px 20px;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    z-index: 1000;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    margin-top: auto; /* Push footer to the bottom of the page */
 }
