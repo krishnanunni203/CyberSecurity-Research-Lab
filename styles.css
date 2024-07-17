@@ -2,32 +2,37 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 header {
     background-color: #333;
     color: #fff;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
 }
 
 .navbar {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    padding: 10px;
-    background-color: #333;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
 }
 
 .nav-link {
     color: #fff;
     text-decoration: none;
-    padding: 10px;
-    display: block;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .nav-link:hover {
     background-color: #575757;
-    border-radius: 4px;
 }
 
 .dropdown {
@@ -38,21 +43,23 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #fff;
+    background-color: #333;
     min-width: 160px;
-    z-index: 1;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
 }
 
 .dropdown-content a {
-    color: #000;
+    color: #fff;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-size: 14px;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #575757;
 }
 
 .dropdown:hover .dropdown-content {
@@ -61,34 +68,26 @@ header {
 
 .main-content {
     padding: 20px;
-}
-
-footer {
     text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-}
-
-footer p {
-    margin: 0;
 }
 
 .home-section {
-    background-image: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg');
+    padding: 20px;
+    background: url('your-homepage-background-image.jpg') no-repeat center center fixed;
     background-size: cover;
+}
+
+.home-content h2, .home-content p {
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 100px 20px;
-}
-
-.home-content {
-    max-width: 800px;
-    margin: auto;
-}
-
-.about-section, .research-section, .funded-projects-section, .publications-section, .achievements-section, .collaborators-section, .events-section {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
 }
