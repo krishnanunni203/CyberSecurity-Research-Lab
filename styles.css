@@ -83,7 +83,22 @@ header {
     border-radius: 8px;
     font-size: 1.5em; /* Increase font size */
 }
-
+.about-content h3{
+    display: flex;
+    justify-content: center;
+}
+.research{
+    justify-content: center;
+    display: flex;
+}
+.project{
+    justify-content: center;
+    display: flex;
+}
+.collab{
+    justify-content: center;
+    display: flex;
+}
 footer {
     text-align: center;
     padding: 10px;
@@ -94,10 +109,24 @@ footer {
     bottom: 0;
 }
 
-h1, p {
+h1, p{
     margin: 0;
-}
 
+}
+h2{
+    display: flex;
+    justify-content:center ;
+}
+p{
+    display: flex;
+    justify-content:center ;
+
+}
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
