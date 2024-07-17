@@ -23,9 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initial Active Section
-    sections.forEach(section => {
-        if (section.classList.contains('home-section')) {
-            section.classList.add('active');
-        }
-    });
+    const homeSection = document.querySelector('.home-section');
+    if (homeSection) {
+        homeSection.classList.add('active');
+    }
 });
