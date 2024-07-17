@@ -79,6 +79,9 @@ header {
 .main-content {
     flex: 1;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Home Section */
@@ -96,12 +99,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
 .home-content {
     z-index: 1; /* Ensure text content appears above the background image */
     position: relative; /* Ensure positioning context */
+    text-align: center;
 }
 
 .home-content h2 {
@@ -116,41 +119,6 @@ header {
     margin-top: 10px;
     color: #fff;
     text-shadow: 2px 2px 4px #000;
-}
-
-/* About Us Section */
-.about-us {
-    padding: 20px;
-}
-
-.about-us h2 {
-    font-size: 2.5rem; /* Increase font size for heading */
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.about-us p.about-description {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-    line-height: 1.6;
-    text-align: left;
-}
-
-.key-facilities {
-    font-size: 2rem;
-    text-align: center;
-    margin: 20px 0;
-}
-
-.facilities-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: left; /* Align text left */
-}
-
-.facilities-list li {
-    margin-bottom: 10px;
 }
 
 /* Footer */
