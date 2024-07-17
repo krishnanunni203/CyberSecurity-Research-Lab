@@ -72,13 +72,33 @@ header {
 }
 
 .home-section {
-    padding: 20px;
-    background: url('your-homepage-background-image.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-image: url('your-image-url.jpg'); /* Replace 'your-image-url.jpg' with the path to your home page image */
+    background-size: cover; /* Ensures the image covers the whole section */
+    background-position: center; /* Centers the image */
+    padding: 100px 20px; /* Adjust padding as needed */
+    color: #fff;
 }
 
-.home-content h2, .home-content p {
-    color: #fff;
+.home-content h2, .about-content h2, .about-content h3 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.home-content p, .about-content p, .about-content ul li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+ul li {
+    margin-bottom: 10px;
 }
 
 footer {
@@ -86,8 +106,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
-    margin: 0;
 }
