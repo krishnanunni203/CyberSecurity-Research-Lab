@@ -156,6 +156,10 @@ main {
     margin-bottom: 20px; /* Add margin for spacing */
 }
 
+.about-section .center-align {
+    text-align: center;
+}
+
 .about-section h2, .about-section p, .about-section h3, .about-section ul {
     margin-bottom: 20px; /* Add margin for spacing */
 }
