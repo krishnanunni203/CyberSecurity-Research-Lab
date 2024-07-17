@@ -125,42 +125,18 @@ main {
     padding: 20px;
 }
 
-.home-section {
-    background-image: url('StockCake-Cybersecurity Monitoring Center_1721095181.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    border-radius: 10px;
-    margin-bottom: 20px; /* Add margin for spacing */
-    position: relative;
-}
-
-.home-content h2 {
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px #000;
-    margin-bottom: 20px;
-}
-
-.home-content p {
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 4px #000;
-}
-
-/* About section styles */
 .about-section {
-    text-align: left;
     padding: 50px 20px;
     margin-bottom: 20px; /* Add margin for spacing */
 }
 
-.about-section .center-align {
+.about-section h2,
+.about-section h3 {
     text-align: center;
+    margin-bottom: 20px; /* Add margin for spacing */
 }
 
-.about-section h2, .about-section p, .about-section h3, .about-section ul {
+.about-section p {
     margin-bottom: 20px; /* Add margin for spacing */
 }
 
@@ -191,20 +167,4 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-}
-
-/* Animation styles */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes slideInFromLeft {
-    0% { transform: translateX(-100%); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes slideInFromRight {
-    0% { transform: translateX(100%); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
 }
