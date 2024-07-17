@@ -31,7 +31,7 @@ header {
 .navbar {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 30px; /* Increase spacing between icons */
     margin-bottom: 10px;
 }
 
@@ -135,47 +135,42 @@ header {
     padding: 20px;
 }
 
-.about-us h2, .about-us h3 {
-    text-align: center;
-}
-
 .about-us h2 {
-    font-size: 2.5rem; /* Increased font size for heading */
+    font-size: 2.5rem; /* Increase font size for heading */
+    text-align: center;
     margin-bottom: 10px;
 }
 
-.about-us p {
+.about-us p.about-description {
     font-size: 1.25rem;
     margin-bottom: 20px;
+    line-height: 1.6;
 }
 
-.about-us ul {
-    list-style-type: none;
+.key-facilities {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.facilities-list {
+    list-style: none;
     padding: 0;
+    margin-top: 10px;
+    font-size: 1.1rem; /* Adjust as needed */
 }
 
-.about-us ul li {
-    font-size: 1.2rem;
+.facilities-list li {
     margin-bottom: 10px;
 }
 
 /* Footer */
 footer {
-    background: #333;
+    background: #0066cc;
     color: #fff;
     text-align: center;
     padding: 10px;
     position: relative;
     bottom: 0;
     width: 100%;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
