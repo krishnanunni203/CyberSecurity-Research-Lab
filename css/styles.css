@@ -1,0 +1,173 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+
+/* Navbar Styling */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #094891;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    background-color: #1a75ff;
+    border-radius: 4px;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #002147;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #1a75ff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Content Styling */
+.main-content {
+    max: width 1500px;;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Home Section Styling */
+.home-section {
+    background-image: url('./../StockCake-Cybersecurity\ Monitoring\ Center_1721095181.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh; /* Full viewport height */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-content {
+    padding: 35px 50px; /* Increased padding */
+    border-radius: 8px;
+    font-size: 2.5em; /* Increase font size */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1); /* Text shadow for readability */
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.9); /* Slightly scaled down */
+    animation: fadeInScale 1s forwards; /* Apply animation */
+}
+
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Section Heading Styling */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #002147;
+    display: flex;
+    justify-content: center;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* List Styling */
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Section Content Styling */
+.about-content h3,
+.research,
+.project,
+.collab {
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        padding: 10px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #002147;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+h1, p {
+    margin: 0;
+}
+
+footer p {
+    margin: 0;
+}

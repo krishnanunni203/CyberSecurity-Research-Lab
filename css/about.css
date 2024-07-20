@@ -1,0 +1,222 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #094891;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #1a75ff;
+    border-radius: 4px;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #002147;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown a {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #1a75ff;
+}
+
+.nav-link a {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main content styling */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.main-content:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* About section styling */
+.about-section {
+    margin-bottom: 1rem; /* Reduced gap below section */
+    text-align: center;
+    width: 100%;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem; /* Reduced margin to decrease space between heading and underline */
+    color: #002147;
+    text-align: center;
+    position: relative;
+    display: inline-block; /* To control width of pseudo-element */
+}
+
+.about-content h2::after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    background-color: #002147;
+    display: block;
+    margin: 0 auto; /* Center the underline */
+    transition: width 0.4s ease; /* Smooth transition effect */
+}
+
+.about-content h2:hover::after {
+    width: 200px;
+}
+
+.about-content h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: #002147;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+.list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+    margin-left: 0; /* Remove default left margin */
+    text-align: center; /* Center align the list */
+}
+
+.list li {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 0; /* No padding needed */
+    transition: transform 0.3s;
+    text-align: left;
+}
+
+.list li::before {
+    content: '•'; /* Custom bullet symbol */
+    color: #002147;
+    font-size: 1.5rem;
+    margin-right: 10px; /* Space between bullet and text */
+}
+
+.list li:hover {
+    transform: translateX(5px);
+}
+
+.list li strong {
+    color: #002147;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #002147;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+/* Footer styling */
+footer {
+    background-color: #002147;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
